@@ -30,7 +30,7 @@ body {
   padding-block: 2.5rem 4rem;
 }
 main { max-width: 64rem; margin-inline: 0; display: flex; flex-direction: column; gap: 3.5rem; }
-section { max-width: 42rem; display: flex; flex-direction: column; gap: 1.25rem; min-width: 0; }
+section { max-width: 52rem; display: flex; flex-direction: column; gap: 1.25rem; min-width: 0; }
 h1, h2 {
   font-family: var(--font-display);
   font-weight: 800;
@@ -38,13 +38,12 @@ h1, h2 {
   letter-spacing: -0.02em;
   color: var(--accent);
   margin: 0;
-  text-wrap: balance;
 }
-h1 { font-size: clamp(2.5rem, 9vw, 3.75rem); }
-h2 { font-size: clamp(1.75rem, 6vw, 2.5rem); }
+h1 { text-align: center; font-size: clamp(1rem, 4.2vw, 2.75rem); }
+h2 { font-size: clamp(0.9rem, 3.2vw, 1.75rem); }
 h3 { font-family: var(--font-display); font-size: 1.125rem; color: var(--accent); margin: 0.5rem 0 0; letter-spacing: 0.02em; }
 p { margin: 0; }
-ul { margin: 0; padding-left: 1.25rem; display: flex; flex-direction: column; gap: 0.5rem; }
+ul { max-width: 42rem; margin: 0; padding-left: 1.25rem; display: flex; flex-direction: column; gap: 0.5rem; }
 ul ul { margin-top: 0.5rem; }
 li::marker { color: var(--accent); }
 strong { color: var(--accent); }
@@ -89,18 +88,18 @@ button:focus-visible, a:focus-visible { outline: 2px solid var(--fg); outline-of
 .examples a small { color: var(--accent); font-weight: 500; font-size: 0.875rem; }
 .examples a:hover { border-color: var(--accent); }
 .wide { max-width: none; }
-hr { max-width: 42rem; border: 0; border-top: 1px solid var(--line); width: 100%; margin: 0; }
+hr { max-width: 52rem; border: 0; border-top: 1px solid var(--line); width: 100%; margin: 0; }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
 .frame { width: 100%; border: 0; border-radius: 1rem; background: var(--surface); }
-.short { aspect-ratio: 9 / 16; max-width: 22rem; }
-.drive { aspect-ratio: 9 / 16; flex: 0 0 14rem; }
+.short { aspect-ratio: 9 / 16; max-width: 22rem; margin-inline: auto; }
+.drive { aspect-ratio: 9 / 16; flex: 0 0 11rem; }
 .testimonials { display: flex; flex-direction: row; gap: 1rem; overflow-x: auto; padding-bottom: 0.5rem; }
 </style>
 </head>
 <body>
 <main>
   <h1>Congratulations on all your success so far!</h1>
-  <section>
+  <section class="wide">
     <h2>Watch video</h2>
     <iframe class="frame short" src="https://www.youtube.com/embed/_-O1sq_Sa0s" title="Intro video" allow="accelerometer; encrypted-media; picture-in-picture; fullscreen" allowfullscreen loading="lazy"></iframe>
   </section>
