@@ -29,8 +29,8 @@ body {
   padding-inline: 1rem;
   padding-block: 2.5rem 4rem;
 }
-main { max-width: 42rem; margin-inline: auto; display: flex; flex-direction: column; gap: 3.5rem; }
-section { display: flex; flex-direction: column; gap: 1.25rem; min-width: 0; }
+main { max-width: 64rem; margin-inline: 0; display: flex; flex-direction: column; gap: 3.5rem; }
+section { max-width: 42rem; display: flex; flex-direction: column; gap: 1.25rem; min-width: 0; }
 h1, h2 {
   font-family: var(--font-display);
   font-weight: 800;
@@ -88,18 +88,20 @@ button:focus-visible, a:focus-visible { outline: 2px solid var(--fg); outline-of
 }
 .examples a small { color: var(--accent); font-weight: 500; font-size: 0.875rem; }
 .examples a:hover { border-color: var(--accent); }
-hr { border: 0; border-top: 1px solid var(--line); width: 100%; margin: 0; }
+.wide { max-width: none; }
+hr { max-width: 42rem; border: 0; border-top: 1px solid var(--line); width: 100%; margin: 0; }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
 .frame { width: 100%; border: 0; border-radius: 1rem; background: var(--surface); }
-.short { aspect-ratio: 9 / 16; max-width: 22rem; margin-inline: auto; }
-.drive { aspect-ratio: 16 / 9; }
-.testimonials { display: flex; flex-direction: column; gap: 1.25rem; }
+.short { aspect-ratio: 9 / 16; max-width: 22rem; }
+.drive { aspect-ratio: 9 / 16; flex: 0 0 14rem; }
+.testimonials { display: flex; flex-direction: row; gap: 1rem; overflow-x: auto; padding-bottom: 0.5rem; }
 </style>
 </head>
 <body>
 <main>
+  <h1>Congratulations on all your success so far!</h1>
   <section>
-    <h1>Watch video</h1>
+    <h2>Watch video</h2>
     <iframe class="frame short" src="https://www.youtube.com/embed/_-O1sq_Sa0s" title="Intro video" allow="accelerometer; encrypted-media; picture-in-picture; fullscreen" allowfullscreen loading="lazy"></iframe>
   </section>
 
@@ -154,7 +156,7 @@ hr { border: 0; border-top: 1px solid var(--line); width: 100%; margin: 0; }
 
   <hr>
 
-  <section>
+  <section class="wide">
     <h2>Examples of testimonials</h2>
     <div class="testimonials">
       <iframe class="frame drive" src="https://drive.google.com/file/d/12SZuaUcV9Ba5s8bDEMKY4UkREEvc_2aP/preview" title="Testimonial 1" allow="autoplay; fullscreen" allowfullscreen loading="lazy"></iframe>
